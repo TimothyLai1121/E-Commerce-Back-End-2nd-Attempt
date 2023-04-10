@@ -17,3 +17,7 @@ app.use(routes);
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}!`);
 });
+
+// testing models //
+// console.log //
+// Import the Category model
