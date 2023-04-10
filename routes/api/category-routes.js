@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
-
 router.get('/', (req, res) => {
   // find all categories
   // be sure to include its associated Products
@@ -10,7 +9,7 @@ router.get('/', (req, res) => {
     include: [
       {
         model: Product,
-        attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
+        attributes: ['id', 'product_name', 'price', 'category_id'] // remove 'stock' attribute
       }
     ]
   })
@@ -31,7 +30,7 @@ router.get('/:id', (req, res) => {
     include: [
       {
         model: Product,
-        attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
+        attributes: ['id', 'product_name', 'price', 'category_id'] // remove 'stock' attribute
       }
     ]
   })
@@ -47,6 +46,7 @@ router.get('/:id', (req, res) => {
     res.status(500).json(err);
   });
 });
+
 
 router.post('/', (req, res) => {
   // create a new category
