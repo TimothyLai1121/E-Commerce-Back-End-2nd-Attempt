@@ -1,6 +1,6 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes } = require("sequelize");
 
-const sequelize = require('../config/connection.js');
+const sequelize = require("../config/connection.js");
 
 class Category extends Model {}
 
@@ -12,7 +12,7 @@ Category.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
-  },
+    },
     category_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -21,8 +21,8 @@ Category.init(
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
-  },
-  updated_at: {
+    },
+    updated_at: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
@@ -33,7 +33,7 @@ Category.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'category',
+    modelName: "category",
   }
 );
 
