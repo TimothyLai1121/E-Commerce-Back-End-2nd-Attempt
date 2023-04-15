@@ -12,6 +12,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
 // sync sequelize models to the database, then turn on the server
+// If you are reading this, i got the most amateur error ever. sequelize.sync!!!!!!!! //
+
 sequelize.sync({ force: false }).then(() => {
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}!`);
