@@ -21,7 +21,9 @@ THEN I am able to successfully create, update, and delete data in my database
 
 ## Demo
 I have included a demo video of the application in action. I linked it so it is easier to see. No subtitle this time.
-![Demo](./demo/Challenge_13.mp4 "Demo Videos")
+YOU HAVE TO CLICK ON THE VIDEO TO SEE AND DOWNLOAD IT. 32MB 
+
+![Demo](./demo/Challenge_13.mp4)
 
 ## What to fix in this project
 Models & Routes Folder. Server.js.
